@@ -1,0 +1,202 @@
+* { /* Mudar tudo na página */
+    padding: 0; /* Remover todo o padding da página */
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* Mudar a fonte de toda a página */
+    text-align: center; /* Deixar todos os textos centralizados */
+    color: white;
+}
+
+html, body {
+    margin: 0; /* Ajuda para deixar o Footer legal */
+}
+
+body {
+    display: flex; /* Precisa disso para o Flex-direction, justify-content, align-items, align-self, align-content, etc... */
+    flex-direction: column; /* Deixa todo o conteudo em coluna */
+    background: url(imagens/background.jpg) center/cover no-repeat; /* Imagem de fundo */
+    background-attachment: fixed; /* Deixa o Background fixo na tela */
+    padding-top: 8%; /* Apenas para corrigir um erro na tela */
+}
+
+nav {
+    background: rgb(0, 0, 0); /* Cor de fundo */
+    position: fixed; /* Deixar fixo na tela */
+    width: 100%; /* Faz ficar do tamanho da tela */
+    top: 0; /* Faz ficar no topo da tela */
+}
+
+nav ul {
+    list-style: none; /* Tirar a bolinha da lista */
+    flex-direction: row; /* Deixar todo o conteúdo em sequência */
+    justify-content: center; /* Colocar todo o conteúdo no meio, sem mexer na distância de cada item */
+}
+
+nav ul li {
+    margin: 15px; /* Colocar um distância entre cada item */
+}
+
+nav ul li a {
+    color: white; /* Cor */
+    text-decoration: none; /* Tirar o sublinhado */
+    font-size: 18px; /* Tamanho da fonte */
+    transition: font-size 0.3s ease; /* "Animação" na fonte */
+    padding: 5px;
+}
+
+nav ul li a:hover { /* Para quando passar o mouse pelo texto */
+    color: brown;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+section {
+    background-color: rgb(41, 37, 39);
+    border-radius: 5px; /* Colocar uma borda na caixa */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.205); /* Colocar uma sombra na caixa */
+    margin: 30px auto; /* Margin nas sections */
+    padding: 20px; /* padding nas sections */
+    width: 80%; /* Para não deixar a section preencher a página toda */
+}
+
+#Início {
+    justify-items: center;
+}
+
+#logo { /* logo do site */
+    box-shadow: 0px 0px 0px rgba(0, 0, 0);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+#logo2 {
+    box-shadow: inset 0px 0px 25px rgba(0, 0, 0); /* Sombra na imagem para dentro */
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.linha-horizontal { /* Linha horizontal entre as sections */
+    padding-top: 30px; /* Separar com a div do topo */
+    margin-bottom: 10px; /* Distanciar da div de baixo */
+    width: auto; /* Comprimento da linha */
+    border-bottom: 2px solid rgb(0, 0, 0); /* Define a linha horizontal */
+}
+
+h1 {
+    margin: 0px;
+}
+
+h3 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.titulo { /* Classe para fazer texto normal virar título */
+    font-style: italic;
+    font-size: xx-large;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+}
+
+a {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(194, 173, 120);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(229, 217, 188);
+    text-decoration: underline;
+}
+
+ul {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    flex-direction: column; /* Deixar a lista em coluna */
+    align-items: center; /* Centralizar itens */
+    display: flex;
+}
+
+img {
+    border-radius: 5px; /* Borda da imagem */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.733); /* Sombra na imagem */
+    width: 600px; /* Comprimento da imagem */
+}
+
+video {
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.733);
+    width: 600px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+}
+
+form label {
+    text-align: left;
+    margin-top: 10px;
+    font-weight: bold;
+    align-self: flex-start;
+}
+
+form input, form textarea {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    align-self: flex-start;
+}
+
+form button {
+    background: #222;
+    color: white;
+    padding: 10px;
+    margin: 10px 10px 0px 10px;
+    align-self: center;
+    cursor: pointer;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 70%;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background: brown;
+}
+
+table {
+    max-width: 400px;
+    width: 400px;
+    margin: auto;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+table caption{
+    margin-bottom: 10px;
+    font-size: larger;
+}
+
+th {
+    border-radius: 2px;
+}
+
+td {
+    border-radius: 2px;
+}
+
+footer { /* Rodapé */
+    background-color: rgb(0, 0, 0);
+    width: 100%; /* Para deixar o comprimento igual o da página */
+}
+
+footer a {
+    font-size: 20px;
+}

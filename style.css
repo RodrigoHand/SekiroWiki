@@ -15,7 +15,7 @@ body {
     flex-direction: column; /* Deixa todo o conteudo em coluna */
     background: url(imagens/background.jpg) center/cover no-repeat; /* Imagem de fundo */
     background-attachment: fixed; /* Deixa o Background fixo na tela */
-    padding-top: 8%; /* Apenas para corrigir um erro na tela */
+    padding-top: 70px; /* Apenas para corrigir um erro na tela */
 }
 
 nav {
@@ -31,6 +31,12 @@ nav ul {
     justify-content: center; /* Colocar todo o conteúdo no meio, sem mexer na distância de cada item */
 }
 
+@media (max-width: 760px) {
+    #NoMargin {
+        margin: 3px;
+    }
+}
+
 nav ul li {
     margin: 15px; /* Colocar um distância entre cada item */
 }
@@ -41,6 +47,12 @@ nav ul li a {
     font-size: 18px; /* Tamanho da fonte */
     transition: font-size 0.3s ease; /* "Animação" na fonte */
     padding: 5px;
+}
+
+@media (max-width: 760px) {
+    nav ul li a {
+        font-size: 13px;
+    }
 }
 
 nav ul li a:hover { /* Para quando passar o mouse pelo texto */
@@ -56,6 +68,12 @@ section {
     margin: 30px auto; /* Margin nas sections */
     padding: 20px; /* padding nas sections */
     width: 80%; /* Para não deixar a section preencher a página toda */
+}
+
+@media (min-width: 1010px) {
+    section {
+        width: 800px;
+    }
 }
 
 #Início {
@@ -125,12 +143,26 @@ img {
     border-radius: 5px; /* Borda da imagem */
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.733); /* Sombra na imagem */
     width: 600px; /* Comprimento da imagem */
+    transition: width 0.3s ease;
+}
+
+@media (max-width: 820px) {
+    img {
+        width: 300px;
+    }
 }
 
 video {
     border-radius: 10px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.733);
     width: 600px;
+    transition: width 0.3s ease;
+}
+
+@media (max-width: 820px) {
+    video {
+        width: 300px;
+    }
 }
 
 form {
@@ -177,6 +209,13 @@ table {
     margin: auto;
     border-radius: 5px;
     padding: 2px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 570px) {
+    table {
+        width: 350px;
+    }
 }
 
 table caption{

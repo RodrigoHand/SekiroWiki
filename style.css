@@ -29,10 +29,11 @@ nav ul {
     list-style: none; /* Tirar a bolinha da lista */
     flex-direction: row; /* Deixar todo o conteúdo em sequência */
     justify-content: center; /* Colocar todo o conteúdo no meio, sem mexer na distância de cada item */
+    margin: 10px;
 }
 
 @media (max-width: 760px) {
-    #NoMargin {
+    #Responsividade {
         margin: 3px;
     }
 }
@@ -59,6 +60,17 @@ nav ul li a:hover { /* Para quando passar o mouse pelo texto */
     color: brown;
     font-size: 20px;
     text-decoration: none;
+}
+
+#symbol {
+    box-shadow: 0px 0px 0px rgba(0, 0, 0);
+    width: 50px;
+}
+
+@media (max-width: 760px) {
+    #symbol {
+        width: 30px;
+    }
 }
 
 section {

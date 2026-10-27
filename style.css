@@ -104,6 +104,7 @@ section {
     width: 300px;
     display: flex;
     flex-direction: column;
+    margin-bottom: 10px;
 }
 
 .linha-horizontal { /* Linha horizontal entre as sections */

@@ -11,19 +11,35 @@
 </head>
 
 <body>
-
-    <script src="script.js"></script>
-
-    <nav>
-        <ul>
-            <a href="https://rodrigohand.github.io/SekiroWiki/" target="_blank"><img src="imagens/sekiro symbol.png" alt="Sekiro-Symbol" id="symbol"></a>            
-            <li id="Responsividade"><a href="#Início">Início</a></li>
-            <li id="Responsividade"><a href="#Inimigos">Inimigos</a></li>
-            <li id="Responsividade"><a href="#Habilidades">Habilidades</a></li>
-            <li id="Responsividade"><a href="#Mecânicas">Mecânicas</a></li>
-            <li id="Responsividade"><a href="#História">História</a></li>
-            <li id="Responsividade"><a href="#Contato">Contato</a></li>
-        </ul>
+    <nav class="navbar md:navbar-expand bg-1 fg-2">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="https://sekiro-shadows-die-twice.fandom.com/wiki/Sekiro:_Shadows_Die_Twice_Wiki" target="_blank">
+                <img src="imagens/sekiro symbol.png" alt="death" width="30" height="30" class="simbolo">
+            </a>
+            <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Alternar tema">
+                <span class="theme-icon" aria-hidden="true">☀️</span>
+                <span class="theme-text">Tema claro</span>
+            </button>
+            <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navbarTopDrawer" aria-controls="navbarTopDrawer" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" aria-hidden="true"></span>
+            </button>
+            <dialog class="drawer drawer-top" tabindex="-1" id="navbarTopDrawer" aria-labelledby="navbarTopDrawerLabel">
+                <div class="drawer-header">
+                    <h5 class="drawer-title" id="navbarTopDrawerLabel">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+                </div>
+                <div class="drawer-body">
+                    <ul class="navbar-nav me-auto mb-2 md:mb-0">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#Início">Início</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#Inimigos">Inimigos</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#Habilidades">Habilidades</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#Mecânicas">Mecânicas</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#História">História</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#Contato">Contato</a></li>
+                    </ul>
+                </div>
+            </dialog>
+        </div>
     </nav>
 
     <section id="Início">
@@ -74,7 +90,7 @@
             <li><a href="https://sekiro-shadows-die-twice.fandom.com/wiki/Ashina_Soldier" target="_blank">Soldados Ashina</a></li>
         </ul>
 
-        <img src="imagens/Enemies.jpg" alt="Inimigos">
+        <img src="imagens/Enemies.jpg" alt="Inimigos" class="imgexemplo">
         
     </section>
 
@@ -93,7 +109,7 @@
             <li><a href="https://sekiro-shadows-die-twice.fandom.com/wiki/Shinobi_Firecracker" target="_blank">Bombinhas Shinobi</a></li>
         </ul>
 
-        <img src="imagens/ferramentas.jpg" alt="Ferramentas">
+        <img src="imagens/ferramentas.jpg" alt="Ferramentas" class="imgexemplo">
 
         <div class="linha-horizontal"></div>
 
@@ -127,7 +143,7 @@
             </tbody>
         </table>
 
-        <img src="imagens/Empowered_Mortal_Draw.webp" alt="Artes">
+        <img src="imagens/Empowered_Mortal_Draw.webp" alt="Artes" class="imgexemplo">
 
     </section>
 
@@ -146,7 +162,7 @@
             <li><a href="https://sekiro-shadows-die-twice.fandom.com/wiki/Healing_Gourd" target="_blank">Cabaça Medicinal</a></li>
         </ul>
 
-        <img src="imagens/Cabaça.png" alt="Items">
+        <img src="imagens/Cabaça.png" alt="Items" class="imgexemplo">
 
     </section>
 
@@ -165,7 +181,7 @@
             <li><a href="https://sekiro-shadows-die-twice.fandom.com/wiki/Senpou_Temple" target="_blank">Templo Senpou</a></li>
         </ul>
 
-        <img src="imagens/Local.jpg" alt="Local">
+        <img src="imagens/Local.jpg" alt="Local" class="imgexemplo">
 
         <div class="linha-horizontal"></div>
 
@@ -182,7 +198,7 @@
             <li><a href="https://sekiro-shadows-die-twice.fandom.com/wiki/Jinzaemon_Kumano" target="_blank">Jinzaemon Kumano</a></li>
         </ul>
 
-        <img src="imagens/Personagem.jpg" alt="Personagens">
+        <img src="imagens/Personagem.jpg" alt="Personagens" class="imgexemplo">
 
         <div class="linha-horizontal"></div>
 
@@ -207,7 +223,7 @@
 
     <section id="Contato">
         <h1>Contato</h1>
-        <form>
+        <form id="form-contato">
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" required>
 
@@ -220,8 +236,11 @@
             <textarea type="mensagem" id="mensagem" name="mensagem" required></textarea>
 
             <button type="submit">Enviar</button>
+            <p id="mensagem-enviada" role="status" aria-live="polite"></p>
         </form>
     </section>
+
+    <script src="script.js"></script>
 </body>
 
 <footer>
